@@ -1,6 +1,23 @@
-let num1 = 10;
-let num2 = 20;
-let operator = "/";
+let disArray = [];
+
+let calc = {
+    firstNumber: 10,
+    secondNumber: 20,
+    operator: '/'
+};
+
+const screen = document.querySelector(".screen");
+const button = document.querySelectorAll(".btn");
+
+button.forEach( (btn) => {
+    btn.addEventListener('click', display);
+})
+
+function display (e){
+    disArray.push(e.target.textContent);
+    screen.textContent = disArray.join(" ");
+}
+ 
 
 function operate (firstNumber,secondNumber,operator) {
 
@@ -36,4 +53,4 @@ function divide (firstNumber, secondNumber) {
     return firstNumber / secondNumber;
 }
 
-operate(num1,num2,operator)
+operate(calc.firstNumber,calc.secondNumber,calc.operator);
