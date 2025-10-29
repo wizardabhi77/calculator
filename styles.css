@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    border : 2px solid purple;
+    flex-direction: column;
+    align-items: center;
+    width : 120px;
+}
+
+.screen {
+
+}
+
+.btn {
+    flex-wrap: wrap;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
